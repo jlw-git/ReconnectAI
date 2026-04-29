@@ -11,7 +11,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'ReconnectAI - Intelligent CRM for Real Estate',
   description: 'AI-powered CRM that helps real estate agents maintain meaningful relationships with their sphere of influence through intelligent outreach and market insights.',
-  generator: 'v0.app',
   icons: {
     icon: [
       {
