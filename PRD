@@ -1,0 +1,244 @@
+# Product Requirements Document (PRD)  
+## Product: ReconnectAI  
+
+
+---
+
+## 1. Overview
+
+ReconnectAI is a CRM-agnostic AI layer that activates dormant client databases for real estate agents by delivering personalized, high-value market insights at scale, driving referrals and repeat business.
+
+---
+
+## 2. Goals & Objectives
+
+### Primary Goal
+Increase revenue generated from past clients.
+
+### Secondary Goals
+- Improve client engagement rates  
+- Increase referral frequency  
+- Reduce manual outreach effort  
+
+---
+
+## 3. Success Metrics
+
+### North Star
+- Revenue from past clients (per agent)
+
+### Key Metrics
+- CRM activation rate (% usable contacts)  
+- Message engagement rate (open/reply)  
+- Re-engagement rate (inactive → active)  
+- Referral rate per 100 clients  
+- Listings generated from past clients  
+
+---
+
+## 4. Target Users
+
+### Primary
+- Individual real estate agents (200–1,000 contacts)
+
+### Secondary
+- Real estate teams  
+- Brokerages  
+
+---
+
+## 5. User Problems
+
+- “I don’t have time to follow up with all my past clients.”  
+- “My CRM is outdated and messy.”  
+- “I don’t know what to say to clients unless they want to sell.”  
+- “I lose deals to agents who stay top-of-mind.”  
+
+---
+
+## 6. Product Scope (MVP)
+
+### 6.1 CRM Integration Layer
+- CSV upload  
+- Google Sheets sync  
+- API integration (basic)  
+
+---
+
+### 6.2 Data Processing
+- Deduplication  
+- Field mapping  
+- Basic enrichment  
+- Tagging (owner, investor, etc.)
+
+---
+
+### 6.3 Intelligence Engine
+- Detect:
+  - Nearby property sales  
+  - Price changes  
+  - Market trends  
+
+---
+
+### 6.4 Personalization Engine
+- Match insights → relevant clients  
+- Template-based personalization  
+
+---
+
+### 6.5 Messaging System
+- Channels:
+  - Email  
+  - WhatsApp (via API)  
+
+- Modes:
+  - Auto-send  
+  - Approval required  
+  - Draft-only  
+
+---
+
+### 6.6 Dashboard (Basic)
+- Contact activation status  
+- Messages sent  
+- Engagement metrics  
+
+---
+
+## 7. Out of Scope (MVP)
+
+- Full CRM replacement  
+- Advanced predictive analytics  
+- Fully autonomous AI conversations  
+- Multi-industry expansion  
+
+---
+
+## 8. User Flows
+
+### Flow 1: Onboarding
+1. Upload CRM / connect integration  
+2. System cleans and structures data  
+3. User reviews segmentation  
+4. User sets preferences (tone, frequency)  
+
+---
+
+### Flow 2: Message Trigger
+1. Market event detected  
+2. System matches relevant clients  
+3. Message generated  
+4. Sent automatically or queued for approval  
+
+---
+
+### Flow 3: Engagement
+1. Client receives message  
+2. Client replies or clicks  
+3. Agent notified  
+4. Agent follows up manually  
+
+---
+
+## 9. Functional Requirements
+
+### CRM Layer
+- Support CSV import  
+- Support API ingestion  
+- Handle inconsistent schemas  
+
+---
+
+### Intelligence Engine
+- Ingest property transaction data  
+- Detect triggers (rules-based MVP)  
+
+---
+
+### Personalization
+- Insert dynamic variables (name, property, location)  
+- Generate natural language messages  
+
+---
+
+### Messaging
+- Queue system  
+- Scheduling  
+- Channel routing  
+
+---
+
+### Dashboard
+- View contact segments  
+- View sent messages  
+- View engagement metrics  
+
+---
+
+## 10. Non-Functional Requirements
+
+- Scalable to 10,000+ contacts per agent  
+- Message latency < 5 minutes after trigger  
+- Data privacy compliance (PDPA/GDPR where applicable)  
+- High reliability for message delivery  
+
+---
+
+## 11. Risks & Mitigations
+
+| Risk | Mitigation |
+|------|--------|
+| Poor CRM data | Strong onboarding + cleaning |
+| Low engagement | High relevance filtering |
+| Integration complexity | Multiple ingestion methods |
+| Trust in AI | Approval workflows |
+
+---
+
+## 12. Dependencies
+
+- Property market data sources  
+- Messaging APIs (WhatsApp, email)  
+- CRM APIs / integration tools  
+
+---
+
+## 13. Future Roadmap
+
+### Phase 2
+- Predictive signals (sell intent)  
+- Smarter segmentation  
+
+### Phase 3
+- Two-way AI conversations  
+- Automated follow-ups  
+
+### Phase 4
+- Referral prompting engine  
+- Cross-industry expansion  
+
+---
+
+## 14. Open Questions
+
+- What is the minimum viable data quality threshold?  
+- Which messaging channel drives highest engagement?  
+- How much control vs automation do agents prefer?  
+
+---
+
+## 15. Launch Plan
+
+- Target early adopters (top-performing agents)  
+- Offer white-glove onboarding  
+- Collect case studies  
+- Iterate on engagement + ROI  
+
+---
+
+## 16. Summary
+
+ReconnectAI transforms static CRMs into active relationship engines by delivering timely, personalized insights at scale—unlocking a high-ROI, underutilized revenue stream for agents.
+
+---
