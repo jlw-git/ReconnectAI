@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { track } from "@vercel/analytics"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +16,8 @@ import {
   CheckCircle2,
   Loader2,
 } from "lucide-react"
+
+const STEP_NAMES = ["hero", "contacts", "intelligence", "email", "closer"] as const
 
 const FAKE_CONTACTS = [
   { name: "David Tan", segment: "Past Client", lastContacted: "2 years ago", stale: true },
@@ -51,6 +54,15 @@ const INSIGHTS = [
 export default function DemoPage() {
   const [step, setStep] = useState(0)
   const totalSteps = 5
+
+  // Funnel tracking: fire one event per step entry. Step name is the property
+  // we'll filter on in the Vercel Analytics dashboard.
+  useEffect(() => {
+    track("demo_step", { step, name: STEP_NAMES[step] })
+    if (step === totalSteps - 1) {
+      track("demo_completed")
+    }
+  }, [step])
 
   const next = () => setStep((s) => Math.min(s + 1, totalSteps - 1))
   const back = () => setStep((s) => Math.max(s - 1, 0))
@@ -194,6 +206,7 @@ function StepIntelligence() {
   const [visible, setVisible] = useState(0)
 
   const startScan = () => {
+    track("demo_scan_clicked")
     setScanning(true)
     setTimeout(() => {
       setScanning(false)
